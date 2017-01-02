@@ -4,7 +4,7 @@
 
    var profileId = document.querySelector('#profile-id') || null;
    var profileUsername = document.querySelector('#profile-username') || null;
-   var profileRepos = document.querySelector('#profile-repos') || null;
+   var profileFollowcount = document.querySelector('#profile-followcount') || null;
    var displayName = document.querySelector('#display-name');
    var apiUrl = appUrl + '/api/:id';
 
@@ -29,8 +29,11 @@
          updateHtmlElement(userObject, profileUsername, 'username');   
       }
 
-      if (profileRepos !== null) {
-         updateHtmlElement(userObject, profileRepos, 'publicRepos');   
+      //if (profileRepos !== null) {
+      //   updateHtmlElement(userObject, profileRepos, 'publicRepos');   
+      //}
+      if (profileFollowcount !== null) {
+         updateHtmlElement(userObject, profileFollowcount, 'followcount');   
       }
 
    }));
