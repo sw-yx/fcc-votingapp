@@ -94,7 +94,7 @@ function ClickHandler () {
 					.exec(function (err, result) {
 							if (err) { throw err; }
 							console.log ('hello from addPollOption');
-							return res.json(result);
+							return res.redirect('/poll#' + req.body.id);
 						}
 					);
 		})
