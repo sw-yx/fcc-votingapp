@@ -67,12 +67,15 @@ module.exports = function (app, passport) {
 		.post(isLoggedIn, clickHandler.viewUser);
 		
 		
-	app.route('/api/new/')
+	app.route('/api/new/') //new poll
 		.post(isLoggedIn, clickHandler.createPoll);
 
-	app.route('/api/add/:id/:option')
-		.get(isLoggedIn, clickHandler.addPollOption) //just to test in browser
+	app.route('/api/add/') // add option
 		.post(isLoggedIn, clickHandler.addPollOption);
+	
+	// app.route('/api/add/:id/:option')
+	// 	.get(isLoggedIn, clickHandler.addPollOption) 
+	// 	.post(isLoggedIn, clickHandler.addPollOption);
 		//.post(isLoggedIn, function (req, res) {
 		//	//res.json(req.user.twitter);
 		//	clickHandler.addPollOption(req.params.id,req.params.option)

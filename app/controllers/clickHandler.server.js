@@ -81,16 +81,16 @@ function ClickHandler () {
 	
 	this.addPollOption = function (req, res) {
 		console.log ('hello from addPollOption');
-		Polls.findOne({ 'id': req.params.id }, function (err, poll) {
+		Polls.findOne({ 'id': req.body.id }, function (err, poll) {
 				if (err) throw err;
 				var theoptions = [];
-				var javascriptisstupid = req.params.option;
+				var javascriptisstupid = req.body.option;
 				theoptions = poll.options;
 				console.log(theoptions);
 				theoptions.push({optname:javascriptisstupid,optval:1});
 				console.log(theoptions);
 				Polls
-					.findOneAndUpdate({ 'id': req.params.id}, { "options": theoptions })
+					.findOneAndUpdate({ 'id': req.body.id}, { "options": theoptions })
 					.exec(function (err, result) {
 							if (err) { throw err; }
 							console.log ('hello from addPollOption');

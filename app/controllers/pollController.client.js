@@ -4,6 +4,11 @@
 
    var pollOptions = document.querySelector('#poll-options') || null;
    var pollName = document.querySelector('#poll-name') || null;
+   var sharelink = document.querySelector('#sharelink') || null;
+   var pollform = document.querySelector('#pollform') || null;
+   
+   
+   
    // var currentPoll = window.location.pathname.split('/')
    // if (currentPoll.length > 1 && currentPoll[0]=='api') {
    //    currentPoll = currentPoll[1];
@@ -28,6 +33,8 @@
 
       if (pollName !== null) {
          updateHtmlElement(userObject, pollName, 'name');   
+         sharelink.innerHTML = '<a href=' + appUrl + "/poll#" + userObject.id + '>Share</a>';
+         pollform.innerHTML = '<input type="text" name="id" value="' + userObject.id + '"></input>';
       }
       
       if (pollOptions !== null) {

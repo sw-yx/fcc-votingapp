@@ -22,9 +22,18 @@
 		<p> </p>
 		<div class="container">
 			<div class="github-profile">
-				<h1 id="poll-name">Poll name</h1>
+				<h1 id="poll-name">Poll name</h1> (<span id="sharelink">Share</span>)
 			    <div id="poll-options"></div>
 			</div>
+		</div>
+		
+		<div class="github-profile">
+			<h1>add poll option</h1>
+			<form action="/api/add/" method="post">
+			  <span id="pollform"></span>
+			  option name: <input type="text" name="option" placeholder="new option"><br>
+			  <input type="submit" value="Submit">
+			</form>
 		</div>
 		
 		<script type="text/javascript" src="../common/ajax-functions.js"></script>
