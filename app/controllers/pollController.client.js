@@ -34,7 +34,7 @@
       if (pollName !== null) {
          updateHtmlElement(userObject, pollName, 'name');   
          sharelink.innerHTML = '<a href=' + appUrl + "/poll#" + userObject.id + '>Share</a>';
-         pollform.innerHTML = '<input type="text" name="id" value="' + userObject.id + '"></input>';
+         pollform.innerHTML = '<input type="hidden" name="id" value="' + userObject.id + '"></input>';
       }
       
       if (pollOptions !== null) {
