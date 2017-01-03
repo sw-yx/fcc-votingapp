@@ -33,7 +33,7 @@
 
       if (pollName !== null) {
          updateHtmlElement(userObject, pollName, 'name');   
-         sharelink.innerHTML = '<a href=' + appUrl + "/poll#" + userObject.id + '>Share</a>';
+         sharelink.innerHTML = '<a href="http://www.twitter.com/share?url' + appUrl + "/poll#" + userObject.id + '">Share</a>';
          pollform.innerHTML = '<input type="hidden" name="id" value="' + userObject.id + '"></input>';
       }
       
