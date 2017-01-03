@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html>
+
+	<head>
+		<title>Poll</title>
+		
+		<link href="/public/css/main.css" rel="stylesheet" type="text/css">
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+	</head>
+
+	<body>
+	<header>
+		<p>Welcome, <span id="display-name"></span>!</p>
+		<a class="menu" href="/profile">My Polls</a>
+		<p>|</p>
+		<a class="menu" href="/">All Polls</a>
+		<p>|</p>
+		<a class="menu" href="/logout">Logout</a>
+	</header>
+		<div id="optionchart" class="github-profile"></div>
+		<p> </p>
+		<div class="container">
+			<div class="github-profile">
+				<h1 id="poll-name">Poll name</h1>
+			    <div id="poll-options"></div>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="../common/ajax-functions.js"></script>
+		<script type="text/javascript" src="../controllers/pollController.client.js"></script>
+	</body>
+
+</html>

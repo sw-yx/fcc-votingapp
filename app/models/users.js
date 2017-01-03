@@ -11,9 +11,7 @@ var User = new Schema({
 		username: String,
         followcount: Number
 	},
-   nbrClicks: {
-      clicks: Number
-   }
+   polls: [{id:String,name:String}]
 });
 
 module.exports = mongoose.model('User', User);
